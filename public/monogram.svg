@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 76" role="img" aria-label="S and J">
+  <g fill="#82707f" font-family="Cormorant Garamond, Georgia, serif" font-weight="400">
+    <text x="9" y="57" font-size="65">S</text>
+    <text x="43" y="47" font-size="26">&amp;</text>
+    <text x="64" y="57" font-size="65">J</text>
+  </g>
+  <path d="M22 69h53" stroke="#82707f" stroke-width=".6"/>
+</svg>

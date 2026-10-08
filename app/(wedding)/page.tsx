@@ -49,9 +49,6 @@ export default async function Home() {
             sizes="(max-width: 650px) 100vw, 90vw"
             priority
           />
-          <span className="hero-side-label" aria-hidden="true">
-            VALLE DE GUADALUPE — 2027
-          </span>
           <div className="photo-footnote">
             <span>{t.home.scroll}</span>
             <a href="#welcome" aria-label={t.common.explore}>

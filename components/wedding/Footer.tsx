@@ -17,7 +17,6 @@ export function Footer({ t }: { t: Dictionary }) {
       <div className="footer-bottom">
         <span>27.08.2027</span>
         <span>SIEMPRE VALLE · BAJA CALIFORNIA</span>
-        <span>{t.common.adult}</span>
       </div>
     </footer>
   );

@@ -49,8 +49,11 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
       </nav>
       <div className="nav-actions">
         <LanguageToggle locale={locale} label={t.common.language} />
-        <Link href="/rsvp" className="nav-rsvp">
-          {t.nav.rsvp}
+        <Link href="/rsvp" className="nav-rsvp" aria-label={t.nav.rsvp}>
+          <span className="nav-rsvp-label">{t.nav.rsvp}</span>
+          <span className="nav-rsvp-short" aria-hidden="true">
+            RSVP
+          </span>
           <ArrowUpRight size={14} />
         </Link>
         <button

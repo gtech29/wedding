@@ -1657,7 +1657,7 @@ select:focus-visible {
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1600px) {
+@media (min-width: 1024px) and (max-width: 1600px) {
   .site-header {
     gap: 20px;
     padding-inline: 4%;
@@ -1670,7 +1670,39 @@ select:focus-visible {
   }
 }
 
-@media (max-width: 1399px) {
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .site-header {
+    padding-inline: 24px;
+    gap: 16px;
+  }
+
+  .desktop-nav {
+    gap: clamp(12px, 1.2vw, 17px);
+  }
+
+  .desktop-nav a {
+    font-size: 14px;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .nav-rsvp {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .nav-rsvp-label {
+    display: none;
+  }
+
+  .nav-rsvp-short {
+    display: inline;
+  }
+}
+
+@media (max-width: 1023px) {
   .desktop-nav-center {
     display: none;
   }

@@ -39,7 +39,15 @@ export const wedding = {
   venue: "Siempre Valle",
   // Confirm the ceremony time before entering a localized display value here.
   ceremonyTime: null as Localized | null,
-  heroPhoto: null as Photo | null,
+  heroPhoto: {
+    id: "hero",
+    src: "/images/hero.jpg",
+    orientation: "landscape",
+    alt: {
+      en: "Sarah and Juan together",
+      "es-MX": "Sarah y Juan juntos",
+    },
+  } as Photo,
   venuePhoto: null as Photo | null,
   story: {
     body: null as Localized | null,

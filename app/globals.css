@@ -9,6 +9,7 @@
   --font-sans: "Manrope", Arial, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
 }
+
 :root {
   --ivory: #f7f4ed;
   --olive: #424a39;
@@ -19,13 +20,16 @@
   --line: #dcdcd0;
   --stone: #d9d1c3;
 }
+
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
 }
+
 body {
   margin: 0;
   background: var(--ivory);
@@ -35,12 +39,18 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
+
+.hero-photo img {
+  object-position: center 75%;
+}
+
 button,
 input,
 textarea,
 select {
   font: inherit;
 }
+
 button,
 a,
 input,
@@ -48,20 +58,25 @@ textarea,
 select {
   -webkit-tap-highlight-color: transparent;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 button {
   cursor: pointer;
 }
+
 button:disabled {
   cursor: wait;
   opacity: 0.65;
 }
+
 button {
   color: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -69,6 +84,7 @@ p,
 figure {
   margin: 0;
 }
+
 h1,
 h2,
 h3,
@@ -76,41 +92,50 @@ h3,
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 400;
 }
+
 h1,
 h2 {
   white-space: pre-line;
 }
+
 h1 {
   font-size: clamp(56px, 6.5vw, 98px);
   line-height: 1.03;
   letter-spacing: -0.035em;
 }
+
 h2 {
   font-size: clamp(42px, 4.5vw, 66px);
   line-height: 1.06;
   letter-spacing: -0.025em;
 }
+
 h3 {
   font-size: 34px;
   line-height: 1.2;
 }
+
 em {
   font-weight: 400;
 }
+
 ::selection {
   background: #d4c8d3;
   color: #302931;
 }
+
 :focus-visible {
   outline: 2px solid var(--plum);
   outline-offset: 5px;
 }
+
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   outline-offset: 3px;
 }
+
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -121,9 +146,11 @@ select:focus-visible {
   color: white;
   transform: translateY(-150%);
 }
+
 .skip-link:focus {
   transform: translateY(0);
 }
+
 .eyebrow {
   font-size: 10px;
   letter-spacing: 0.19em;
@@ -131,11 +158,13 @@ select:focus-visible {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 .monogram {
   width: 68px;
   height: 52px;
   display: block;
 }
+
 .site-header {
   height: 100px;
   display: flex;
@@ -147,9 +176,11 @@ select:focus-visible {
   position: relative;
   z-index: 30;
 }
+
 .brand {
   flex-shrink: 0;
 }
+
 .desktop-nav {
   display: flex;
   gap: 27px;
@@ -157,11 +188,13 @@ select:focus-visible {
   margin-right: auto;
   align-items: center;
 }
+
 .desktop-nav a {
   font-size: 11px;
   position: relative;
   white-space: nowrap;
 }
+
 .desktop-nav a:after {
   content: "";
   position: absolute;
@@ -174,24 +207,29 @@ select:focus-visible {
   transform-origin: left;
   transition: transform 0.2s;
 }
+
 .desktop-nav a:hover:after,
 .desktop-nav a[aria-current]:after {
   transform: scaleX(1);
 }
+
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 24px;
 }
+
 .language-wrap {
   position: relative;
 }
+
 .language-toggle {
   display: flex;
   align-items: center;
   gap: 7px;
   font-size: 10px;
 }
+
 .language-toggle button {
   border: 0;
   background: none;
@@ -200,13 +238,16 @@ select:focus-visible {
   min-height: 44px;
   color: var(--text);
 }
+
 .language-toggle button[aria-pressed="true"] {
   color: var(--text);
   font-weight: 600;
 }
+
 .language-toggle span {
   color: var(--text);
 }
+
 .language-error {
   position: absolute;
   top: 100%;
@@ -214,6 +255,7 @@ select:focus-visible {
   right: 0;
   font-size: 10px;
 }
+
 .nav-rsvp {
   display: flex;
   align-items: center;
@@ -227,10 +269,12 @@ select:focus-visible {
   letter-spacing: 0.09em;
   white-space: nowrap;
 }
+
 .nav-rsvp:hover {
   background: var(--button-hover);
   border-color: var(--button-hover);
 }
+
 .menu-button {
   display: none;
   background: none;
@@ -239,9 +283,11 @@ select:focus-visible {
   min-width: 44px;
   min-height: 44px;
 }
+
 .mobile-nav {
   display: none;
 }
+
 .button {
   min-height: 50px;
   display: inline-flex;
@@ -257,20 +303,25 @@ select:focus-visible {
     background 0.2s,
     transform 0.2s;
 }
+
 .button:hover {
   transform: translateY(-2px);
 }
+
 .button-primary {
   background: var(--text);
   color: #fff;
 }
+
 .button-primary:hover {
   background: var(--button-hover);
 }
+
 .button-outline {
   border-color: var(--line);
   background: transparent;
 }
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -280,17 +331,21 @@ select:focus-visible {
   font-size: 11px;
   font-weight: 500;
 }
+
 .text-link:hover {
   color: var(--text);
   border-color: var(--plum);
 }
+
 .hero {
   padding: 56px 6.25% 0;
 }
+
 .hero-heading {
   max-width: 1240px;
   margin: auto;
 }
+
 .hero .eyebrow {
   display: flex;
   align-items: center;
@@ -298,10 +353,12 @@ select:focus-visible {
   gap: 22px;
   font-size: 9px;
 }
+
 .tiny-star {
   font-size: 19px;
   font-weight: 400;
 }
+
 .hero h1 {
   font-size: clamp(72px, 11.8vw, 180px);
   line-height: 1.09;
@@ -310,41 +367,49 @@ select:focus-visible {
   margin: 15px 0 24px;
   white-space: nowrap;
 }
+
 .hero h1 em {
   font-size: 0.66em;
   letter-spacing: -0.075em;
   color: var(--text);
   padding: 0 0.055em;
 }
+
 .hero-period {
   color: var(--text);
 }
+
 .hero-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 4px 31px;
 }
-.hero-bottom > p {
+
+.hero-bottom>p {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 24px;
   line-height: 1.4;
 }
-.hero-bottom > p > span {
+
+.hero-bottom>p>span {
   display: block;
   font-family: "Manrope", sans-serif;
   font-size: 8px;
   letter-spacing: 0.14em;
   margin-top: 9px;
 }
+
 .hero-photo-wrap {
   position: relative;
   max-width: 1390px;
   margin: auto;
 }
+
 .hero-photo {
   height: 390px !important;
 }
+
 .hero-side-label {
   position: absolute;
   writing-mode: vertical-rl;
@@ -354,6 +419,7 @@ select:focus-visible {
   font-size: 8px;
   letter-spacing: 0.16em;
 }
+
 .photo-footnote {
   display: flex;
   justify-content: space-between;
@@ -362,9 +428,11 @@ select:focus-visible {
   border-bottom: 1px solid var(--line);
   font-size: 10px;
 }
+
 .photo-footnote a {
   padding: 8px 12px;
 }
+
 .photo-placeholder,
 .photo-frame {
   position: relative;
@@ -372,26 +440,29 @@ select:focus-visible {
   overflow: hidden;
   min-height: 220px;
 }
+
 .photo-frame img {
   object-fit: cover;
 }
+
 .photo-frame.portrait {
   min-height: 570px;
 }
+
 .gallery-cell .photo-frame.portrait {
   min-height: 0;
 }
+
 .photo-placeholder {
   isolation: isolate;
-  background: linear-gradient(
-    173deg,
-    #ddd8c9 0%,
-    #cbc9b5 30%,
-    #8a9278 72%,
-    #727d61 100%
-  );
+  background: linear-gradient(173deg,
+      #ddd8c9 0%,
+      #cbc9b5 30%,
+      #8a9278 72%,
+      #727d61 100%);
   color: #f7f4ed;
 }
+
 .photo-placeholder:after {
   content: "";
   position: absolute;
@@ -401,6 +472,7 @@ select:focus-visible {
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.6' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
+
 .photo-placeholder:before {
   content: "";
   position: absolute;
@@ -413,10 +485,12 @@ select:focus-visible {
   transform: rotate(8deg);
   opacity: 0.6;
 }
+
 .photo-placeholder.portrait {
   min-height: 570px;
   background: linear-gradient(155deg, #d4c8b7 8%, #b8b09b 43%, #8a9076 100%);
 }
+
 .photo-placeholder.portrait:before {
   height: 95%;
   width: 57%;
@@ -427,13 +501,16 @@ select:focus-visible {
   background: linear-gradient(180deg, #7e866b44, #59664b88);
   opacity: 0.65;
 }
+
 .photo-placeholder.stone {
   background: linear-gradient(150deg, #d5c8ba, #ad9c91);
 }
+
 .photo-placeholder.stone:before {
   background: #c9bdae;
   opacity: 0.5;
 }
+
 .placeholder-sun {
   width: 83px;
   height: 83px;
@@ -444,6 +521,7 @@ select:focus-visible {
   left: 67%;
   background: radial-gradient(#e7dfc95e, transparent);
 }
+
 .landscape-lines {
   position: absolute;
   inset: 0;
@@ -454,6 +532,7 @@ select:focus-visible {
   stroke-width: 0.65;
   opacity: 0.23;
 }
+
 .placeholder-center {
   position: absolute;
   inset: 0;
@@ -464,12 +543,14 @@ select:focus-visible {
   gap: 16px;
   z-index: 4;
 }
+
 .placeholder-center .monogram {
   width: 110px;
   height: 85px;
   opacity: 0.85;
 }
-.placeholder-center > span {
+
+.placeholder-center>span {
   font-size: 8px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -479,6 +560,7 @@ select:focus-visible {
   text-align: center;
   max-width: 85%;
 }
+
 .placeholder-number {
   position: absolute;
   left: 22px;
@@ -488,6 +570,7 @@ select:focus-visible {
   z-index: 4;
   color: #fff;
 }
+
 .real-caption {
   position: absolute;
   bottom: 0;
@@ -498,12 +581,14 @@ select:focus-visible {
   padding: 10px 18px;
   font-size: 12px;
 }
+
 .section-shell {
   max-width: 1260px;
   margin: 0 auto;
   padding-left: 65px;
   padding-right: 65px;
 }
+
 .welcome-section {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -511,23 +596,28 @@ select:focus-visible {
   padding-top: 110px;
   padding-bottom: 110px;
 }
+
 .welcome-section .eyebrow {
   margin-bottom: 30px;
 }
+
 .welcome-copy {
   padding-top: 0;
   max-width: 390px;
 }
+
 .welcome-copy p {
   margin: 17px 0 24px;
   line-height: 1.95;
   font-size: 13px;
 }
+
 .four-point-star {
   font-size: 34px;
   color: var(--text);
   line-height: 1;
 }
+
 .venue-section {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -535,57 +625,69 @@ select:focus-visible {
   gap: 100px;
   padding-bottom: 110px;
 }
+
 .venue-caption {
   display: block;
   margin-top: 14px;
   font-size: 8px;
   letter-spacing: 0.15em;
 }
-.venue-copy > .eyebrow {
+
+.venue-copy>.eyebrow {
   margin-bottom: 23px;
 }
-.venue-copy > p:not(.eyebrow) {
+
+.venue-copy>p:not(.eyebrow) {
   margin-top: 25px;
   max-width: 370px;
   font-size: 13px;
   line-height: 1.95;
 }
+
 .venue-details {
   margin: 33px 0 25px;
   border-top: 1px solid var(--line);
 }
-.venue-details > div {
+
+.venue-details>div {
   display: flex;
   gap: 20px;
   align-items: flex-start;
   border-bottom: 1px solid var(--line);
   padding: 19px 0;
 }
+
 .venue-details svg {
   margin-top: 5px;
   flex-shrink: 0;
 }
+
 .venue-details p {
   font-size: 12px;
 }
+
 .venue-details p span {
   display: block;
   color: var(--muted);
   font-size: 10px;
   margin-top: 4px;
 }
+
 .venue-date {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 22px;
   line-height: 1.25;
 }
+
 .details-section {
   padding-top: 25px;
   padding-bottom: 110px;
 }
-.details-section > h2 {
+
+.details-section>h2 {
   margin-top: 22px;
 }
+
 .detail-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -593,6 +695,7 @@ select:focus-visible {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
 .detail-card {
   display: block;
   padding: 30px 32px 32px;
@@ -600,47 +703,57 @@ select:focus-visible {
   position: relative;
   transition: background 0.2s;
 }
+
 .detail-card:first-child {
   padding-left: 0;
 }
+
 .detail-card:last-child {
   border-right: 0;
 }
+
 .detail-card:hover {
   background: #eae9df;
 }
+
 .detail-card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 36px;
 }
-.detail-card-top > span:first-child {
+
+.detail-card-top>span:first-child {
   font-size: 9px;
   letter-spacing: 0.14em;
   color: var(--muted);
 }
+
 .detail-card-top svg {
   stroke-width: 1;
   width: 23px;
   height: 23px;
 }
+
 .detail-card-top .serif {
   font-size: 29px;
   line-height: 1;
 }
+
 .detail-card p {
   font-size: 12px;
   max-width: 235px;
   margin-top: 16px;
   padding-bottom: 46px;
 }
+
 .card-arrow {
   position: absolute;
   bottom: 29px;
   right: 30px;
   stroke-width: 1;
 }
+
 .rsvp-invitation {
   background: var(--olive);
   color: var(--ivory);
@@ -650,13 +763,16 @@ select:focus-visible {
   overflow: hidden;
   padding: 85px 24px 90px;
 }
+
 .rsvp-invitation h2 {
   margin-top: 25px;
 }
-.rsvp-invitation > p:not(.eyebrow) {
+
+.rsvp-invitation>p:not(.eyebrow) {
   font-size: 12px;
   margin: 25px 0 30px;
 }
+
 .rsvp-decoration {
   position: absolute;
   width: 350px;
@@ -669,21 +785,26 @@ select:focus-visible {
   bottom: -180px;
   z-index: -1;
 }
+
 .site-footer {
   padding: 50px 6.25% 25px;
 }
+
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 35px;
 }
-.footer-top > .serif {
+
+.footer-top>.serif {
   font-size: 26px;
 }
+
 .footer-top .text-link {
   font-size: 10px;
 }
+
 .footer-bottom {
   border-top: 1px solid var(--line);
   display: flex;
@@ -694,21 +815,25 @@ select:focus-visible {
   font-size: 8px;
   letter-spacing: 0.08em;
 }
+
 .page-intro {
   text-align: center;
   padding: 75px 24px 60px;
   max-width: 850px;
   margin: auto;
 }
+
 .page-intro h1 {
   margin: 26px 0;
 }
+
 .intro-copy {
   max-width: 550px;
   margin: auto;
   font-size: 13px;
   line-height: 1.95;
 }
+
 .intro-rule {
   display: block;
   width: 45px;
@@ -716,47 +841,57 @@ select:focus-visible {
   background: var(--plum);
   margin: 30px auto 0;
 }
+
 .page-body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 40px 95px;
 }
+
 .story-editorial {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 .story-copy h2 {
   font-size: 44px;
   margin: 20px 0;
 }
-.story-copy > p {
+
+.story-copy>p {
   line-height: 2;
   white-space: pre-line;
 }
+
 .coming-note {
   background: #edede3;
   padding: 25px 28px;
   border-left: 2px solid #a6ac98;
   font-size: 12px;
 }
+
 .milestones {
   margin-top: 70px;
   border-top: 1px solid var(--line);
   padding-top: 35px;
 }
+
 .milestones h2 {
   font-size: 37px;
 }
+
 .milestones p {
   margin-top: 17px;
   font-size: 13px;
 }
+
 .milestone-item {
   padding: 25px 0;
   border-bottom: 1px solid var(--line);
 }
+
 .category-labels {
   display: flex;
   flex-wrap: wrap;
@@ -764,103 +899,126 @@ select:focus-visible {
   gap: 10px;
   margin-bottom: 40px;
 }
+
 .category-labels span {
   border: 1px solid var(--line);
   font-size: 10px;
   padding: 8px 15px;
   border-radius: 50px;
 }
+
 .empty-editorial {
   text-align: center;
   padding: 75px 24px;
   background: #eeede3;
   border: 1px solid var(--line);
 }
-.empty-editorial > .monogram {
+
+.empty-editorial>.monogram {
   margin: 0 auto 25px;
   color: var(--text);
 }
+
 .empty-editorial h2 {
   font-size: 38px;
 }
+
 .empty-editorial p {
   font-size: 12px;
   margin: 18px auto 0;
   max-width: 450px;
 }
+
 .recommendations {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
+
 .recommendation h2 {
   font-size: 35px;
   margin-top: 18px;
 }
-.recommendation > p {
+
+.recommendation>p {
   margin-top: 13px;
 }
+
 .recommendation-links {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 15px;
 }
+
 .travel-venue {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #edede3;
   align-items: center;
 }
+
 .travel-venue .photo-placeholder {
   min-height: 320px;
 }
+
 .travel-venue-copy {
   padding: 40px;
 }
+
 .travel-venue-copy h2 {
   font-size: 46px;
   margin: 20px 0;
 }
+
 .travel-venue-copy p:not(.eyebrow) {
   white-space: pre-line;
   font-size: 12px;
 }
+
 .travel-sections {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
 }
+
 .travel-section {
   border-top: 1px solid var(--line);
   padding: 28px 0 35px;
 }
+
 .travel-section h2 {
   font-size: 33px;
   margin-bottom: 14px;
 }
+
 .travel-section p {
   font-size: 12px;
   line-height: 1.9;
   white-space: pre-line;
 }
+
 .travel-section .eyebrow {
   display: block;
   font-size: 8px;
   margin-bottom: 15px;
   color: var(--muted);
 }
+
 .faq-body {
   max-width: 830px;
 }
+
 .faq-item {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.faq-item + .faq-item {
+
+.faq-item+.faq-item {
   border-top: 0;
 }
+
 .faq-item summary {
   display: flex;
   align-items: center;
@@ -872,28 +1030,34 @@ select:focus-visible {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 28px;
 }
+
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
+
 .faq-item summary svg {
   flex-shrink: 0;
   width: 18px;
   transition: transform 0.2s;
 }
+
 .faq-item[open] summary svg {
   transform: rotate(45deg);
 }
+
 .faq-answer {
   font-size: 13px;
   padding-bottom: 27px;
   max-width: 630px;
   line-height: 1.9;
 }
+
 .faq-more {
   margin-top: 30px;
   color: var(--muted);
   font-size: 12px;
 }
+
 .contact-note {
   margin-top: 60px;
   text-align: center;
@@ -901,10 +1065,12 @@ select:focus-visible {
   background: #eeede3;
   font-size: 12px;
 }
+
 .fund-body {
   text-align: center;
   max-width: 760px;
 }
+
 .fund-art {
   width: 240px;
   height: 275px;
@@ -917,6 +1083,7 @@ select:focus-visible {
   color: var(--text);
   position: relative;
 }
+
 .fund-art:after {
   content: "";
   position: absolute;
@@ -924,40 +1091,49 @@ select:focus-visible {
   border-radius: 150px 150px 0 0;
   inset: 14px;
 }
+
 .fund-art .monogram {
   width: 120px;
   height: 100px;
 }
+
 .fund-body .coming-note {
   border: 0;
   background: none;
 }
+
 .fund-thanks {
   margin-top: 20px;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 29px;
 }
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   align-items: start;
 }
+
 .gallery-cell {
   margin-bottom: 20px;
 }
+
 .gallery-cell .photo-placeholder,
 .gallery-cell .photo-frame {
   height: 280px;
   min-height: 0;
 }
+
 .gallery-cell .portrait {
   height: 420px;
   min-height: 0;
 }
+
 .gallery-column:nth-child(2) {
   padding-top: 65px;
 }
+
 .gallery-cell button {
   display: block;
   width: 100%;
@@ -966,18 +1142,21 @@ select:focus-visible {
   padding: 0;
   text-align: left;
 }
+
 .gallery-cell figcaption {
   font-size: 10px;
   margin-top: 10px;
   display: flex;
   gap: 14px;
 }
+
 .gallery-note {
   text-align: center;
   font-size: 12px;
   color: var(--muted);
   margin-top: 30px;
 }
+
 .gallery-dialog {
   border: 0;
   padding: 0;
@@ -988,16 +1167,20 @@ select:focus-visible {
   height: 90dvh;
   max-height: 950px;
 }
+
 .gallery-dialog::backdrop {
   background: #171d15ed;
 }
+
 .lightbox-image {
   position: absolute;
   inset: 65px 60px 75px;
 }
+
 .lightbox-image img {
   object-fit: contain;
 }
+
 .lightbox-close {
   position: absolute;
   top: 10px;
@@ -1007,6 +1190,7 @@ select:focus-visible {
   background: none;
   z-index: 1;
 }
+
 .lightbox-control {
   position: absolute;
   top: 45%;
@@ -1017,12 +1201,15 @@ select:focus-visible {
   background: none;
   border: 0;
 }
+
 .lightbox-control.prev {
   left: 5px;
 }
+
 .lightbox-control.next {
   right: 5px;
 }
+
 .lightbox-caption {
   position: absolute;
   bottom: 20px;
@@ -1031,42 +1218,51 @@ select:focus-visible {
   text-align: center;
   font-size: 12px;
 }
+
 .rsvp-page {
   max-width: 740px;
   padding: 65px 25px 90px;
   margin: auto;
 }
+
 .rsvp-page .page-intro {
   padding: 0 0 40px;
 }
+
 .rsvp-page .page-intro h1 {
   font-size: 76px;
 }
+
 .rsvp-panel {
   background: #fcfaf5;
   border: 1px solid var(--line);
   padding: 37px;
 }
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
 .field {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 23px;
 }
-.field > label {
+
+.field>label {
   font-size: 11px;
   font-weight: 600;
 }
-.field label > span {
+
+.field label>span {
   color: var(--muted);
   font-size: 10px;
   font-weight: 400;
 }
+
 .field input,
 .field textarea {
   width: 100%;
@@ -1077,21 +1273,26 @@ select:focus-visible {
   color: var(--text);
   min-height: 49px;
 }
+
 .field input:focus,
 .field textarea:focus {
   border-color: var(--olive);
 }
+
 .field textarea {
   resize: vertical;
   min-height: 90px;
 }
+
 .field textarea::placeholder {
   font-size: 11px;
   color: var(--text);
 }
+
 .full-width {
   width: 100%;
 }
+
 .rsvp-privacy {
   display: flex;
   align-items: flex-start;
@@ -1101,15 +1302,18 @@ select:focus-visible {
   margin-top: 22px;
   line-height: 1.8;
 }
+
 .rsvp-privacy svg {
   flex-shrink: 0;
   margin-top: 3px;
 }
+
 .recovery-area {
   border-top: 1px solid var(--line);
   padding-top: 20px;
   margin-top: 23px;
 }
+
 .link-button {
   border: 0;
   padding: 8px 0;
@@ -1119,12 +1323,14 @@ select:focus-visible {
   font-size: 11px;
   min-height: 44px;
 }
+
 .recovery-message {
   font-size: 12px;
   margin-top: 12px;
   padding: 17px;
   background: #eeede3;
 }
+
 .form-error {
   background: #efe1e6;
   color: #683c4f;
@@ -1133,25 +1339,31 @@ select:focus-visible {
   font-size: 12px;
   margin-bottom: 22px;
 }
+
 .verification-heading {
   font-size: 34px;
   margin-bottom: 13px;
 }
+
 .verification-copy {
   font-size: 12px;
   margin-bottom: 25px;
 }
+
 .invitation-title {
   text-align: center;
   margin-bottom: 30px;
 }
+
 .invitation-title h1 {
   font-size: 65px;
   margin: 22px 0;
 }
-.invitation-title > p:not(.eyebrow) {
+
+.invitation-title>p:not(.eyebrow) {
   font-size: 12px;
 }
+
 .household-label {
   display: flex;
   align-items: center;
@@ -1161,21 +1373,26 @@ select:focus-visible {
   margin-bottom: 15px;
   border-bottom: 1px solid var(--line);
 }
+
 .household-label h2 {
   font-size: 29px;
 }
+
 .household-label span {
   font-size: 10px;
 }
+
 .guest-response {
   padding: 22px 0;
   border: 0;
   margin: 0;
   min-width: 0;
 }
-.guest-response + .guest-response {
+
+.guest-response+.guest-response {
   border-top: 1px solid var(--line);
 }
+
 .guest-response legend {
   float: left;
   width: 100%;
@@ -1184,19 +1401,23 @@ select:focus-visible {
   margin-bottom: 20px;
   line-height: 1.3;
 }
+
 .guest-fields {
   clear: both;
 }
-.guest-fields > p {
+
+.guest-fields>p {
   font-size: 11px;
   margin-bottom: 10px;
 }
+
 .attendance-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 22px;
 }
+
 .attendance-option {
   border: 1px solid #c7cbbf;
   padding: 15px 12px;
@@ -1207,16 +1428,19 @@ select:focus-visible {
   min-height: 56px;
   cursor: pointer;
 }
+
 .attendance-option:has(input:checked) {
   background: #e9edde;
   border-color: var(--olive);
 }
+
 .attendance-option input {
   accent-color: var(--olive);
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
+
 .adult-checkbox {
   display: flex;
   gap: 10px;
@@ -1224,46 +1448,57 @@ select:focus-visible {
   font-size: 12px;
   margin: 0 0 20px;
 }
+
 .adult-checkbox input {
   width: 18px;
   height: 18px;
   accent-color: var(--olive);
 }
+
 .deadline-note {
   margin-top: 18px;
   text-align: center;
   font-size: 11px;
 }
+
 .confirmation-header {
   text-align: center;
   margin-bottom: 35px;
 }
+
 .confirmation-header .monogram {
   margin: 0 auto 25px;
   width: 100px;
   height: 75px;
 }
+
 .confirmation-header h1 {
   font-size: 83px;
   margin-bottom: 12px;
 }
-.confirmation-header > p {
+
+.confirmation-header>p {
   font-size: 13px;
 }
+
 .confirmation-row {
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
+
 .confirmation-row:last-child {
   border-bottom: 0;
 }
+
 .confirmation-row h3 {
   font-size: 29px;
   margin-bottom: 6px;
 }
+
 .confirmation-row p {
   font-size: 12px;
 }
+
 .confirmation-row small {
   display: block;
   margin-top: 5px;
@@ -1272,16 +1507,19 @@ select:focus-visible {
   white-space: pre-line;
   overflow-wrap: anywhere;
 }
+
 .edit-response {
   text-align: center;
   padding-top: 25px;
 }
+
 .edit-response p {
   font-size: 10px;
   color: var(--muted);
   max-width: 410px;
   margin: 12px auto 0;
 }
+
 .standalone-message {
   min-height: 100vh;
   padding: 70px 24px;
@@ -1292,63 +1530,79 @@ select:focus-visible {
   text-align: center;
   gap: 25px;
 }
+
 .standalone-message h1 {
   max-width: 850px;
 }
+
 .page-loading {
   min-height: 60vh;
   display: grid;
   place-items: center;
 }
+
 .page-loading .monogram {
   animation: gentle-pulse 1.5s ease-in-out infinite alternate;
 }
+
 @keyframes gentle-pulse {
   from {
     opacity: 0.35;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @media (min-width: 1600px) {
   .hero-photo {
     height: 470px !important;
   }
 }
+
 @media (max-width: 1150px) {
   .desktop-nav {
     gap: 17px;
   }
+
   .desktop-nav a {
     font-size: 10px;
   }
+
   .site-header {
     gap: 20px;
     padding: 0 4%;
   }
+
   .nav-actions {
     gap: 16px;
   }
+
   .welcome-section,
   .venue-section {
     gap: 60px;
   }
+
   .section-shell {
     padding-left: 55px;
     padding-right: 55px;
   }
 }
+
 @media (max-width: 980px) {
   .desktop-nav {
     display: none;
   }
+
   .menu-button {
     display: block;
   }
+
   .site-header {
     height: 85px;
   }
+
   .mobile-nav {
     display: flex;
     flex-direction: column;
@@ -1361,6 +1615,7 @@ select:focus-visible {
     border-bottom: 1px solid var(--line);
     box-shadow: 0 25px 25px #2c332815;
   }
+
   .mobile-nav a {
     display: flex;
     align-items: center;
@@ -1370,110 +1625,139 @@ select:focus-visible {
     font-size: 28px;
     border-bottom: 1px solid var(--line);
   }
+
   .mobile-nav a svg {
     margin-left: auto;
   }
+
   .mobile-nav a[aria-current] {
     color: var(--text);
   }
+
   .hero {
     padding-top: 40px;
   }
+
   .hero h1 {
     margin-top: 24px;
   }
+
   .hero-photo {
     height: 350px !important;
   }
+
   .section-shell {
     padding-left: 40px;
     padding-right: 40px;
   }
+
   .welcome-section,
   .venue-section {
     gap: 40px;
   }
+
   .photo-placeholder.portrait {
     min-height: 450px;
   }
+
   .welcome-section {
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
   .venue-section {
     padding-bottom: 80px;
   }
+
   .story-editorial {
     gap: 40px;
   }
+
   .gallery-grid {
     gap: 16px;
   }
+
   .gallery-cell .portrait {
     height: 350px;
   }
 }
+
 @media (max-width: 650px) {
   body {
     font-size: 13px;
   }
+
   .site-header {
     height: 77px;
     padding: 0 20px;
     gap: 15px;
   }
+
   .brand .monogram {
     width: 57px;
     height: 45px;
   }
+
   .nav-actions {
     gap: 13px;
   }
+
   .nav-rsvp {
     padding: 10px 12px;
     gap: 10px;
     font-size: 9px;
   }
+
   .nav-rsvp svg {
     display: none;
   }
+
   .language-toggle {
     gap: 5px;
   }
+
   .menu-button {
     padding: 8px 0;
     min-width: 34px;
   }
+
   .hero {
     padding: 34px 23px 0;
   }
+
   .hero .eyebrow {
     font-size: 8px;
     gap: 15px;
   }
+
   .hero h1 {
     font-size: clamp(52px, 12vw, 80px);
     margin: 23px -5px 25px;
     letter-spacing: -0.05em;
   }
+
   .hero h1 em {
     font-size: 0.65em;
   }
+
   .hero-bottom {
     align-items: flex-start;
     gap: 14px;
     flex-direction: column;
     padding-bottom: 24px;
   }
-  .hero-bottom > p {
+
+  .hero-bottom>p {
     font-size: 23px;
   }
-  .hero-bottom > p > span {
+
+  .hero-bottom>p>span {
     font-size: 7px;
     margin-top: 6px;
     letter-spacing: 0.11em;
   }
-  .hero-bottom > .button {
+
+  .hero-bottom>.button {
     position: absolute;
     right: 24px;
     margin-top: 0;
@@ -1482,335 +1766,427 @@ select:focus-visible {
     padding: 12px 14px;
     gap: 13px;
   }
-  html[lang="es-MX"] .hero-bottom > .button {
+
+  html[lang="es-MX"] .hero-bottom>.button {
     position: static;
     margin-top: 8px;
   }
+
   .hero-photo {
     height: 290px !important;
   }
+
   .hero-side-label {
     display: none;
   }
+
   .placeholder-center .monogram {
     width: 90px;
     height: 70px;
   }
-  .placeholder-center > span {
+
+  .placeholder-center>span {
     font-size: 7px;
     letter-spacing: 0.12em;
   }
+
   .photo-footnote {
     font-size: 9px;
   }
+
   .section-shell {
     padding-left: 25px;
     padding-right: 25px;
   }
+
   .welcome-section {
     display: block;
     padding-top: 64px;
     padding-bottom: 60px;
   }
+
   .welcome-section .eyebrow {
     margin-bottom: 22px;
   }
+
   .welcome-section h2 {
     font-size: 43px;
   }
+
   .welcome-copy {
     margin-top: 27px;
     max-width: 100%;
   }
+
   .welcome-copy .four-point-star {
     display: none;
   }
+
   .welcome-copy p {
     font-size: 12px;
     line-height: 1.9;
   }
+
   .venue-section {
     grid-template-columns: 1fr;
     gap: 35px;
     padding-bottom: 65px;
   }
+
   .venue-photo {
     padding-right: 30px;
   }
+
   .photo-placeholder.portrait {
     min-height: 410px;
   }
+
   .venue-copy {
     padding-left: 22px;
   }
+
   .venue-copy h2 {
     font-size: 47px;
   }
-  .venue-copy > p:not(.eyebrow) {
+
+  .venue-copy>p:not(.eyebrow) {
     font-size: 12px;
   }
+
   .venue-details {
     margin-top: 25px;
   }
+
   .details-section {
     padding-top: 0;
     padding-bottom: 65px;
   }
+
   .details-section h2 {
     font-size: 42px;
   }
+
   .detail-cards {
     grid-template-columns: 1fr;
     margin-top: 30px;
   }
+
   .detail-card,
   .detail-card:first-child {
     padding: 24px 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+
   .detail-card:last-child {
     border-bottom: 0;
   }
+
   .detail-card-top {
     margin-bottom: 12px;
   }
+
   .detail-card h3 {
     font-size: 34px;
   }
+
   .detail-card p {
     padding-bottom: 0;
     margin-top: 10px;
     max-width: 80%;
     font-size: 12px;
   }
+
   .card-arrow {
     right: 0;
     bottom: 28px;
   }
+
   .rsvp-invitation {
     padding: 65px 25px;
   }
+
   .rsvp-invitation h2 {
     font-size: 48px;
   }
-  .rsvp-invitation > .eyebrow {
+
+  .rsvp-invitation>.eyebrow {
     font-size: 8px;
   }
-  .rsvp-invitation > p:not(.eyebrow) {
+
+  .rsvp-invitation>p:not(.eyebrow) {
     font-size: 11px;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .site-footer {
     padding: 35px 24px 25px;
   }
+
   .footer-top {
     flex-wrap: wrap;
     row-gap: 25px;
     padding-bottom: 28px;
   }
-  .footer-top > .serif {
+
+  .footer-top>.serif {
     font-size: 24px;
   }
-  .footer-top > .text-link {
+
+  .footer-top>.text-link {
     width: 100%;
     justify-content: space-between;
   }
+
   .footer-bottom {
     flex-wrap: wrap;
     gap: 14px;
     font-size: 7px;
   }
-  .footer-bottom > span:last-child {
+
+  .footer-bottom>span:last-child {
     width: 100%;
   }
+
   .page-intro {
     padding: 55px 24px 40px;
   }
+
   .page-intro h1 {
     font-size: 61px;
     margin: 23px 0;
   }
+
   .intro-copy {
     font-size: 12px;
   }
+
   .page-body {
     padding: 0 24px 65px;
   }
+
   .story-editorial {
     grid-template-columns: 1fr;
     gap: 35px;
   }
+
   .story-editorial .photo-placeholder {
     min-height: 400px;
   }
+
   .story-copy h2 {
     font-size: 40px;
   }
-  .story-copy > p {
+
+  .story-copy>p {
     font-size: 12px;
   }
+
   .milestones {
     margin-top: 40px;
   }
+
   .empty-editorial {
     padding: 50px 20px;
   }
+
   .empty-editorial h2 {
     font-size: 34px;
   }
+
   .category-labels {
     gap: 8px;
   }
+
   .category-labels span {
     font-size: 9px;
     padding: 6px 12px;
   }
+
   .recommendations {
     grid-template-columns: 1fr;
   }
+
   .travel-venue {
     grid-template-columns: 1fr;
   }
+
   .travel-venue .photo-placeholder {
     min-height: 260px;
   }
+
   .travel-venue-copy {
     padding: 28px;
   }
+
   .travel-sections {
     grid-template-columns: 1fr;
     margin-top: 30px;
   }
+
   .travel-section {
     padding: 24px 0;
   }
+
   .travel-section h2 {
     font-size: 32px;
   }
+
   .faq-item summary {
     font-size: 26px;
   }
+
   .faq-answer {
     font-size: 12px;
   }
+
   .contact-note {
     margin-top: 40px;
   }
+
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
     gap: 13px;
   }
+
   .gallery-column:nth-child(2) {
     padding-top: 40px;
   }
+
   .gallery-column:nth-child(3) {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 13px;
   }
+
   .gallery-cell .photo-placeholder,
   .gallery-cell .photo-frame {
     height: 170px;
   }
+
   .gallery-cell .portrait {
     height: 250px;
   }
+
   .gallery-cell .placeholder-center .monogram {
     width: 65px;
     height: 50px;
   }
-  .gallery-cell .placeholder-center > span {
+
+  .gallery-cell .placeholder-center>span {
     font-size: 6px;
     padding: 6px 9px;
     max-width: 95%;
   }
+
   .gallery-cell .placeholder-number {
     font-size: 6px;
     left: 10px;
     bottom: 10px;
   }
+
   .gallery-cell figcaption {
     font-size: 8px;
     gap: 8px;
   }
+
   .gallery-cell {
     margin-bottom: 12px;
   }
+
   .lightbox-image {
     inset: 60px 40px 75px;
   }
+
   .lightbox-control {
     width: 35px;
   }
+
   .lightbox-caption {
     left: 25px;
     right: 25px;
   }
+
   .rsvp-page {
     padding: 50px 20px 65px;
   }
+
   .rsvp-page .page-intro h1 {
     font-size: 60px;
   }
+
   .rsvp-panel {
     padding: 25px 20px;
   }
+
   .form-grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
+
   .field {
     margin-bottom: 20px;
   }
+
   .field input,
   .field textarea {
     font-size: 16px;
   }
+
   .rsvp-privacy {
     font-size: 10px;
   }
+
   .attendance-options {
     grid-template-columns: 1fr;
     gap: 9px;
   }
+
   .attendance-option {
     min-height: 53px;
     font-size: 12px;
     padding: 13px;
   }
+
   .invitation-title h1 {
     font-size: 53px;
   }
+
   .household-label {
     align-items: flex-start;
     flex-direction: column;
     gap: 5px;
   }
+
   .confirmation-header h1 {
     font-size: 66px;
   }
 }
+
 @media (max-width: 980px) {
   .photo-frame.portrait {
     min-height: 450px;
   }
 }
+
 @media (max-width: 650px) {
   .photo-frame.portrait {
     min-height: 410px;
   }
+
   .gallery-cell .photo-frame.portrait {
     min-height: 0;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *:before,
   *:after {

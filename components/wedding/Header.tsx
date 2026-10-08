@@ -31,22 +31,24 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
       >
         <Monogram />
       </Link>
-      <nav
-        className="desktop-nav"
-        aria-label={
-          locale === "en" ? "Main navigation" : "Navegación principal"
-        }
-      >
-        {links.slice(1).map(([href, label]) => (
-          <Link
-            key={href}
-            href={href}
-            aria-current={pathname === href ? "page" : undefined}
-          >
-            {label}
-          </Link>
-        ))}
-      </nav>
+      <div className="desktop-nav-center">
+        <nav
+          className="desktop-nav"
+          aria-label={
+            locale === "en" ? "Main navigation" : "Navegación principal"
+          }
+        >
+          {links.slice(1).map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={pathname === href ? "page" : undefined}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      </div>
       <div className="nav-actions">
         <LanguageToggle locale={locale} label={t.common.language} />
         <Link href="/rsvp" className="nav-rsvp" aria-label={t.nav.rsvp}>

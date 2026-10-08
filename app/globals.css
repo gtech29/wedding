@@ -19,6 +19,13 @@
   --muted: var(--text);
   --line: #dcdcd0;
   --stone: #d9d1c3;
+  /* Typography: edit these shared sizes instead of individual page rules. */
+  --font-size-hero: clamp(48px, 8vw, 100px);
+  --font-size-title: clamp(48px, 6.5vw, 80px);
+  --font-size-heading: clamp(36px, 4vw, 48px);
+  --font-size-body: 17px;
+  --font-size-control: 15px;
+  --font-size-small: 12px;
 }
 
 * {
@@ -35,7 +42,7 @@ body {
   background: var(--ivory);
   color: var(--text);
   font-family: "Manrope", Arial, sans-serif;
-  font-size: 14px;
+  font-size: var(--font-size-body);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -99,14 +106,14 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(56px, 6.5vw, 98px);
+  font-size: var(--font-size-title);
   line-height: 1.03;
   letter-spacing: -0.035em;
 }
 
 h2 {
-  font-size: clamp(42px, 4.5vw, 66px);
-  line-height: 1.06;
+  font-size: var(--font-size-heading);
+  line-height: 1.15;
   letter-spacing: -0.025em;
 }
 
@@ -152,7 +159,7 @@ select:focus-visible {
 }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.19em;
   line-height: 1.5;
   font-weight: 600;
@@ -190,7 +197,7 @@ select:focus-visible {
 }
 
 .desktop-nav a {
-  font-size: 11px;
+  font-size: var(--font-size-control);
   position: relative;
   white-space: nowrap;
 }
@@ -227,7 +234,7 @@ select:focus-visible {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 10px;
+  font-size: var(--font-size-control);
 }
 
 .language-toggle button {
@@ -253,7 +260,7 @@ select:focus-visible {
   top: 100%;
   width: 110px;
   right: 0;
-  font-size: 10px;
+  font-size: var(--font-size-small);
 }
 
 .nav-rsvp {
@@ -264,7 +271,7 @@ select:focus-visible {
   border: 1px solid var(--text);
   background: var(--text);
   color: #fff;
-  font-size: 10px;
+  font-size: var(--font-size-control);
   text-transform: uppercase;
   letter-spacing: 0.09em;
   white-space: nowrap;
@@ -295,7 +302,7 @@ select:focus-visible {
   align-items: center;
   gap: 30px;
   padding: 15px 26px;
-  font-size: 11px;
+  font-size: var(--font-size-control);
   font-weight: 500;
   letter-spacing: 0.055em;
   border: 1px solid transparent;
@@ -328,7 +335,7 @@ select:focus-visible {
   gap: 25px;
   padding: 8px 0;
   border-bottom: 1px solid #a9ab9e;
-  font-size: 11px;
+  font-size: var(--font-size-control);
   font-weight: 500;
 }
 
@@ -351,7 +358,7 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 22px;
-  font-size: 9px;
+  font-size: var(--font-size-small);
 }
 
 .tiny-star {
@@ -360,10 +367,10 @@ select:focus-visible {
 }
 
 .hero h1 {
-  font-size: clamp(72px, 11.8vw, 180px);
-  line-height: 1.09;
+  font-size: var(--font-size-hero);
+  line-height: 1.05;
   text-align: center;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
   margin: 15px 0 24px;
   white-space: nowrap;
 }
@@ -386,16 +393,16 @@ select:focus-visible {
   padding: 0 4px 31px;
 }
 
-.hero-bottom>p {
+.hero-bottom > p {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 24px;
+  font-size: 54px;
   line-height: 1.4;
 }
 
-.hero-bottom>p>span {
+.hero-bottom > p > span {
   display: block;
   font-family: "Manrope", sans-serif;
-  font-size: 8px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.14em;
   margin-top: 9px;
 }
@@ -416,7 +423,7 @@ select:focus-visible {
   right: -29px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 8px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.16em;
 }
 
@@ -426,7 +433,7 @@ select:focus-visible {
   align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 10px;
+  font-size: var(--font-size-small);
 }
 
 .photo-footnote a {
@@ -455,11 +462,13 @@ select:focus-visible {
 
 .photo-placeholder {
   isolation: isolate;
-  background: linear-gradient(173deg,
-      #ddd8c9 0%,
-      #cbc9b5 30%,
-      #8a9278 72%,
-      #727d61 100%);
+  background: linear-gradient(
+    173deg,
+    #ddd8c9 0%,
+    #cbc9b5 30%,
+    #8a9278 72%,
+    #727d61 100%
+  );
   color: #f7f4ed;
 }
 
@@ -550,8 +559,8 @@ select:focus-visible {
   opacity: 0.85;
 }
 
-.placeholder-center>span {
-  font-size: 8px;
+.placeholder-center > span {
+  font-size: var(--font-size-small);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 7px 13px;
@@ -565,7 +574,7 @@ select:focus-visible {
   position: absolute;
   left: 22px;
   bottom: 16px;
-  font-size: 8px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.14em;
   z-index: 4;
   color: #fff;
@@ -579,7 +588,7 @@ select:focus-visible {
   background: #0006;
   color: #fff;
   padding: 10px 18px;
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .section-shell {
@@ -608,8 +617,8 @@ select:focus-visible {
 
 .welcome-copy p {
   margin: 17px 0 24px;
-  line-height: 1.95;
-  font-size: 13px;
+  line-height: 1.7;
+  font-size: var(--font-size-body);
 }
 
 .four-point-star {
@@ -629,19 +638,19 @@ select:focus-visible {
 .venue-caption {
   display: block;
   margin-top: 14px;
-  font-size: 8px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.15em;
 }
 
-.venue-copy>.eyebrow {
+.venue-copy > .eyebrow {
   margin-bottom: 23px;
 }
 
-.venue-copy>p:not(.eyebrow) {
+.venue-copy > p:not(.eyebrow) {
   margin-top: 25px;
   max-width: 370px;
-  font-size: 13px;
-  line-height: 1.95;
+  font-size: var(--font-size-body);
+  line-height: 1.7;
 }
 
 .venue-details {
@@ -649,7 +658,7 @@ select:focus-visible {
   border-top: 1px solid var(--line);
 }
 
-.venue-details>div {
+.venue-details > div {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -663,13 +672,13 @@ select:focus-visible {
 }
 
 .venue-details p {
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .venue-details p span {
   display: block;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--font-size-small);
   margin-top: 4px;
 }
 
@@ -684,7 +693,7 @@ select:focus-visible {
   padding-bottom: 110px;
 }
 
-.details-section>h2 {
+.details-section > h2 {
   margin-top: 22px;
 }
 
@@ -723,8 +732,8 @@ select:focus-visible {
   margin-bottom: 36px;
 }
 
-.detail-card-top>span:first-child {
-  font-size: 9px;
+.detail-card-top > span:first-child {
+  font-size: var(--font-size-small);
   letter-spacing: 0.14em;
   color: var(--muted);
 }
@@ -741,7 +750,7 @@ select:focus-visible {
 }
 
 .detail-card p {
-  font-size: 12px;
+  font-size: var(--font-size-body);
   max-width: 235px;
   margin-top: 16px;
   padding-bottom: 46px;
@@ -768,8 +777,8 @@ select:focus-visible {
   margin-top: 25px;
 }
 
-.rsvp-invitation>p:not(.eyebrow) {
-  font-size: 12px;
+.rsvp-invitation > p:not(.eyebrow) {
+  font-size: var(--font-size-body);
   margin: 25px 0 30px;
 }
 
@@ -797,12 +806,12 @@ select:focus-visible {
   padding-bottom: 35px;
 }
 
-.footer-top>.serif {
+.footer-top > .serif {
   font-size: 26px;
 }
 
 .footer-top .text-link {
-  font-size: 10px;
+  font-size: var(--font-size-control);
 }
 
 .footer-bottom {
@@ -812,7 +821,7 @@ select:focus-visible {
   justify-content: space-between;
   gap: 20px;
   padding-top: 22px;
-  font-size: 8px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.08em;
 }
 
@@ -830,8 +839,8 @@ select:focus-visible {
 .intro-copy {
   max-width: 550px;
   margin: auto;
-  font-size: 13px;
-  line-height: 1.95;
+  font-size: var(--font-size-body);
+  line-height: 1.7;
 }
 
 .intro-rule {
@@ -860,8 +869,8 @@ select:focus-visible {
   margin: 20px 0;
 }
 
-.story-copy>p {
-  line-height: 2;
+.story-copy > p {
+  line-height: 1.7;
   white-space: pre-line;
 }
 
@@ -869,7 +878,7 @@ select:focus-visible {
   background: #edede3;
   padding: 25px 28px;
   border-left: 2px solid #a6ac98;
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .milestones {
@@ -884,7 +893,7 @@ select:focus-visible {
 
 .milestones p {
   margin-top: 17px;
-  font-size: 13px;
+  font-size: var(--font-size-body);
 }
 
 .milestone-item {
@@ -902,7 +911,7 @@ select:focus-visible {
 
 .category-labels span {
   border: 1px solid var(--line);
-  font-size: 10px;
+  font-size: var(--font-size-small);
   padding: 8px 15px;
   border-radius: 50px;
 }
@@ -914,7 +923,7 @@ select:focus-visible {
   border: 1px solid var(--line);
 }
 
-.empty-editorial>.monogram {
+.empty-editorial > .monogram {
   margin: 0 auto 25px;
   color: var(--text);
 }
@@ -924,7 +933,7 @@ select:focus-visible {
 }
 
 .empty-editorial p {
-  font-size: 12px;
+  font-size: var(--font-size-body);
   margin: 18px auto 0;
   max-width: 450px;
 }
@@ -940,7 +949,7 @@ select:focus-visible {
   margin-top: 18px;
 }
 
-.recommendation>p {
+.recommendation > p {
   margin-top: 13px;
 }
 
@@ -973,7 +982,7 @@ select:focus-visible {
 
 .travel-venue-copy p:not(.eyebrow) {
   white-space: pre-line;
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .travel-sections {
@@ -994,14 +1003,14 @@ select:focus-visible {
 }
 
 .travel-section p {
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: var(--font-size-body);
+  line-height: 1.7;
   white-space: pre-line;
 }
 
 .travel-section .eyebrow {
   display: block;
-  font-size: 8px;
+  font-size: var(--font-size-small);
   margin-bottom: 15px;
   color: var(--muted);
 }
@@ -1015,7 +1024,7 @@ select:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
-.faq-item+.faq-item {
+.faq-item + .faq-item {
   border-top: 0;
 }
 
@@ -1046,16 +1055,16 @@ select:focus-visible {
 }
 
 .faq-answer {
-  font-size: 13px;
+  font-size: var(--font-size-body);
   padding-bottom: 27px;
   max-width: 630px;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 
 .faq-more {
   margin-top: 30px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .contact-note {
@@ -1063,7 +1072,7 @@ select:focus-visible {
   text-align: center;
   padding: 28px;
   background: #eeede3;
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .fund-body {
@@ -1144,7 +1153,7 @@ select:focus-visible {
 }
 
 .gallery-cell figcaption {
-  font-size: 10px;
+  font-size: var(--font-size-small);
   margin-top: 10px;
   display: flex;
   gap: 14px;
@@ -1152,7 +1161,7 @@ select:focus-visible {
 
 .gallery-note {
   text-align: center;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   color: var(--muted);
   margin-top: 30px;
 }
@@ -1216,7 +1225,7 @@ select:focus-visible {
   left: 65px;
   right: 65px;
   text-align: center;
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .rsvp-page {
@@ -1252,14 +1261,14 @@ select:focus-visible {
   margin-bottom: 23px;
 }
 
-.field>label {
-  font-size: 11px;
+.field > label {
+  font-size: var(--font-size-control);
   font-weight: 600;
 }
 
-.field label>span {
+.field label > span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--font-size-control);
   font-weight: 400;
 }
 
@@ -1285,7 +1294,7 @@ select:focus-visible {
 }
 
 .field textarea::placeholder {
-  font-size: 11px;
+  font-size: var(--font-size-control);
   color: var(--text);
 }
 
@@ -1297,7 +1306,7 @@ select:focus-visible {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 10px;
+  font-size: var(--font-size-small);
   color: var(--muted);
   margin-top: 22px;
   line-height: 1.8;
@@ -1320,12 +1329,12 @@ select:focus-visible {
   background: none;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 11px;
+  font-size: var(--font-size-control);
   min-height: 44px;
 }
 
 .recovery-message {
-  font-size: 12px;
+  font-size: var(--font-size-body);
   margin-top: 12px;
   padding: 17px;
   background: #eeede3;
@@ -1336,7 +1345,7 @@ select:focus-visible {
   color: #683c4f;
   border-left: 2px solid #9c677e;
   padding: 14px 17px;
-  font-size: 12px;
+  font-size: var(--font-size-body);
   margin-bottom: 22px;
 }
 
@@ -1346,7 +1355,7 @@ select:focus-visible {
 }
 
 .verification-copy {
-  font-size: 12px;
+  font-size: var(--font-size-body);
   margin-bottom: 25px;
 }
 
@@ -1360,8 +1369,8 @@ select:focus-visible {
   margin: 22px 0;
 }
 
-.invitation-title>p:not(.eyebrow) {
-  font-size: 12px;
+.invitation-title > p:not(.eyebrow) {
+  font-size: var(--font-size-body);
 }
 
 .household-label {
@@ -1379,7 +1388,7 @@ select:focus-visible {
 }
 
 .household-label span {
-  font-size: 10px;
+  font-size: var(--font-size-small);
 }
 
 .guest-response {
@@ -1389,7 +1398,7 @@ select:focus-visible {
   min-width: 0;
 }
 
-.guest-response+.guest-response {
+.guest-response + .guest-response {
   border-top: 1px solid var(--line);
 }
 
@@ -1406,8 +1415,8 @@ select:focus-visible {
   clear: both;
 }
 
-.guest-fields>p {
-  font-size: 11px;
+.guest-fields > p {
+  font-size: var(--font-size-control);
   margin-bottom: 10px;
 }
 
@@ -1424,7 +1433,7 @@ select:focus-visible {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: var(--font-size-control);
   min-height: 56px;
   cursor: pointer;
 }
@@ -1445,7 +1454,7 @@ select:focus-visible {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-size: 12px;
+  font-size: var(--font-size-control);
   margin: 0 0 20px;
 }
 
@@ -1458,7 +1467,7 @@ select:focus-visible {
 .deadline-note {
   margin-top: 18px;
   text-align: center;
-  font-size: 11px;
+  font-size: var(--font-size-small);
 }
 
 .confirmation-header {
@@ -1477,8 +1486,8 @@ select:focus-visible {
   margin-bottom: 12px;
 }
 
-.confirmation-header>p {
-  font-size: 13px;
+.confirmation-header > p {
+  font-size: var(--font-size-body);
 }
 
 .confirmation-row {
@@ -1496,13 +1505,13 @@ select:focus-visible {
 }
 
 .confirmation-row p {
-  font-size: 12px;
+  font-size: var(--font-size-body);
 }
 
 .confirmation-row small {
   display: block;
   margin-top: 5px;
-  font-size: 11px;
+  font-size: var(--font-size-small);
   color: var(--muted);
   white-space: pre-line;
   overflow-wrap: anywhere;
@@ -1514,7 +1523,7 @@ select:focus-visible {
 }
 
 .edit-response p {
-  font-size: 10px;
+  font-size: var(--font-size-small);
   color: var(--muted);
   max-width: 410px;
   margin: 12px auto 0;
@@ -1564,10 +1573,6 @@ select:focus-visible {
 @media (max-width: 1150px) {
   .desktop-nav {
     gap: 17px;
-  }
-
-  .desktop-nav a {
-    font-size: 10px;
   }
 
   .site-header {
@@ -1680,11 +1685,16 @@ select:focus-visible {
   .gallery-cell .portrait {
     height: 350px;
   }
+  .photo-frame.portrait {
+    min-height: 450px;
+  }
 }
 
 @media (max-width: 650px) {
-  body {
-    font-size: 13px;
+  :root {
+    --font-size-body: 16px;
+    --font-size-control: 14px;
+    --font-size-small: 11px;
   }
 
   .site-header {
@@ -1705,7 +1715,6 @@ select:focus-visible {
   .nav-rsvp {
     padding: 10px 12px;
     gap: 10px;
-    font-size: 9px;
   }
 
   .nav-rsvp svg {
@@ -1726,12 +1735,10 @@ select:focus-visible {
   }
 
   .hero .eyebrow {
-    font-size: 8px;
     gap: 15px;
   }
 
   .hero h1 {
-    font-size: clamp(52px, 12vw, 80px);
     margin: 23px -5px 25px;
     letter-spacing: -0.05em;
   }
@@ -1747,29 +1754,22 @@ select:focus-visible {
     padding-bottom: 24px;
   }
 
-  .hero-bottom>p {
+  .hero-bottom > p {
     font-size: 23px;
   }
 
-  .hero-bottom>p>span {
-    font-size: 7px;
+  .hero-bottom > p > span {
     margin-top: 6px;
     letter-spacing: 0.11em;
   }
 
-  .hero-bottom>.button {
-    position: absolute;
-    right: 24px;
+  .hero-bottom > .button {
+    position: static;
     margin-top: 0;
     min-height: 45px;
-    font-size: 9px;
+    font-size: var(--font-size-control);
     padding: 12px 14px;
     gap: 13px;
-  }
-
-  html[lang="es-MX"] .hero-bottom>.button {
-    position: static;
-    margin-top: 8px;
   }
 
   .hero-photo {
@@ -1785,13 +1785,8 @@ select:focus-visible {
     height: 70px;
   }
 
-  .placeholder-center>span {
-    font-size: 7px;
+  .placeholder-center > span {
     letter-spacing: 0.12em;
-  }
-
-  .photo-footnote {
-    font-size: 9px;
   }
 
   .section-shell {
@@ -1809,10 +1804,6 @@ select:focus-visible {
     margin-bottom: 22px;
   }
 
-  .welcome-section h2 {
-    font-size: 43px;
-  }
-
   .welcome-copy {
     margin-top: 27px;
     max-width: 100%;
@@ -1823,8 +1814,7 @@ select:focus-visible {
   }
 
   .welcome-copy p {
-    font-size: 12px;
-    line-height: 1.9;
+    line-height: 1.7;
   }
 
   .venue-section {
@@ -1845,14 +1835,6 @@ select:focus-visible {
     padding-left: 22px;
   }
 
-  .venue-copy h2 {
-    font-size: 47px;
-  }
-
-  .venue-copy>p:not(.eyebrow) {
-    font-size: 12px;
-  }
-
   .venue-details {
     margin-top: 25px;
   }
@@ -1860,10 +1842,6 @@ select:focus-visible {
   .details-section {
     padding-top: 0;
     padding-bottom: 65px;
-  }
-
-  .details-section h2 {
-    font-size: 42px;
   }
 
   .detail-cards {
@@ -1894,7 +1872,6 @@ select:focus-visible {
     padding-bottom: 0;
     margin-top: 10px;
     max-width: 80%;
-    font-size: 12px;
   }
 
   .card-arrow {
@@ -1906,16 +1883,11 @@ select:focus-visible {
     padding: 65px 25px;
   }
 
-  .rsvp-invitation h2 {
-    font-size: 48px;
+  .rsvp-invitation > .eyebrow {
+    font-size: var(--font-size-small);
   }
 
-  .rsvp-invitation>.eyebrow {
-    font-size: 8px;
-  }
-
-  .rsvp-invitation>p:not(.eyebrow) {
-    font-size: 11px;
+  .rsvp-invitation > p:not(.eyebrow) {
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -1931,11 +1903,11 @@ select:focus-visible {
     padding-bottom: 28px;
   }
 
-  .footer-top>.serif {
+  .footer-top > .serif {
     font-size: 24px;
   }
 
-  .footer-top>.text-link {
+  .footer-top > .text-link {
     width: 100%;
     justify-content: space-between;
   }
@@ -1943,10 +1915,9 @@ select:focus-visible {
   .footer-bottom {
     flex-wrap: wrap;
     gap: 14px;
-    font-size: 7px;
   }
 
-  .footer-bottom>span:last-child {
+  .footer-bottom > span:last-child {
     width: 100%;
   }
 
@@ -1957,10 +1928,6 @@ select:focus-visible {
   .page-intro h1 {
     font-size: 61px;
     margin: 23px 0;
-  }
-
-  .intro-copy {
-    font-size: 12px;
   }
 
   .page-body {
@@ -1980,8 +1947,8 @@ select:focus-visible {
     font-size: 40px;
   }
 
-  .story-copy>p {
-    font-size: 12px;
+  .story-copy > p {
+    font-size: var(--font-size-body);
   }
 
   .milestones {
@@ -2001,7 +1968,6 @@ select:focus-visible {
   }
 
   .category-labels span {
-    font-size: 9px;
     padding: 6px 12px;
   }
 
@@ -2038,10 +2004,6 @@ select:focus-visible {
     font-size: 26px;
   }
 
-  .faq-answer {
-    font-size: 12px;
-  }
-
   .contact-note {
     margin-top: 40px;
   }
@@ -2076,20 +2038,19 @@ select:focus-visible {
     height: 50px;
   }
 
-  .gallery-cell .placeholder-center>span {
-    font-size: 6px;
+  .gallery-cell .placeholder-center > span {
+    font-size: var(--font-size-small);
     padding: 6px 9px;
     max-width: 95%;
   }
 
   .gallery-cell .placeholder-number {
-    font-size: 6px;
+    font-size: var(--font-size-small);
     left: 10px;
     bottom: 10px;
   }
 
   .gallery-cell figcaption {
-    font-size: 8px;
     gap: 8px;
   }
 
@@ -2133,11 +2094,7 @@ select:focus-visible {
 
   .field input,
   .field textarea {
-    font-size: 16px;
-  }
-
-  .rsvp-privacy {
-    font-size: 10px;
+    font-size: var(--font-size-body);
   }
 
   .attendance-options {
@@ -2147,7 +2104,6 @@ select:focus-visible {
 
   .attendance-option {
     min-height: 53px;
-    font-size: 12px;
     padding: 13px;
   }
 
@@ -2164,15 +2120,6 @@ select:focus-visible {
   .confirmation-header h1 {
     font-size: 66px;
   }
-}
-
-@media (max-width: 980px) {
-  .photo-frame.portrait {
-    min-height: 450px;
-  }
-}
-
-@media (max-width: 650px) {
   .photo-frame.portrait {
     min-height: 410px;
   }

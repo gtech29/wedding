@@ -48,7 +48,15 @@ export const wedding = {
       "es-MX": "Sarah y Juan juntos",
     },
   } as Photo,
-  venuePhoto: null as Photo | null,
+  venuePhoto: {
+    id: "venue",
+    src: "/images/venue1.png",
+    orientation: "portrait",
+    alt: {
+      en: "Siempre Valle in Valle de Guadalupe",
+      "es-MX": "Siempre Valle en Valle de Guadalupe",
+    },
+  } as Photo,
   story: {
     body: null as Localized | null,
     milestones: [] as { date: string; title: Localized; body: Localized }[],

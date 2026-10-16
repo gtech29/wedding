@@ -84,14 +84,13 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
             locale === "en" ? "Mobile navigation" : "Navegación móvil"
           }
         >
-          {links.map(([href, label], i) => (
+          {links.map(([href, label]) => (
             <Link
               href={href}
               key={href}
               aria-current={pathname === href ? "page" : undefined}
               onClick={() => setOpen(false)}
             >
-              <span className="eyebrow">0{i + 1}</span>
               {label}
               <ArrowUpRight size={20} />
             </Link>

@@ -92,7 +92,7 @@ export default async function Home() {
             <div>
               <MapPin size={18} strokeWidth={1.2} />
               <p>
-                Siempre Valle<span>{t.common.location}</span>
+                Siempre Vall<span>{t.common.location}</span>
               </p>
             </div>
             <div>

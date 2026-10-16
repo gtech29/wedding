@@ -1070,6 +1070,40 @@ select:focus-visible {
   white-space: pre-line;
 }
 
+.travel-section > p + p {
+  margin-top: 16px;
+}
+
+.travel-pending {
+  margin-top: 20px;
+  padding-left: 16px;
+  border-left: 2px solid var(--line);
+}
+
+.travel-pending h3 {
+  font-family: inherit;
+  font-size: var(--font-size-small);
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.travel-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.travel-links .text-link {
+  min-height: 44px;
+  padding: 10px 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.travel-section {
+  min-width: 0;
+}
+
 .travel-section .eyebrow {
   display: block;
   font-size: var(--font-size-small);

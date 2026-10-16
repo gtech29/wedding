@@ -95,7 +95,7 @@ test("the gallery and travel pages label missing content without fabricated deta
   await page.goto("/travel");
   await expect(page.locator("main")).toContainText("Siempre Valle");
   await expect(page.locator("main")).toContainText(
-    "We’ll share these details soon.",
+    "We’re putting together nearby lodging options",
   );
   await page.goto("/honeymoon-fund");
   await expect(
@@ -104,6 +104,47 @@ test("the gallery and travel pages label missing content without fabricated deta
   await expect(
     page.locator('input[type="number"], input[autocomplete="cc-number"]'),
   ).toHaveCount(0);
+});
+
+test("travel keeps pending arrangements distinct in both languages and fits the viewport", async ({
+  page,
+}) => {
+  await page.goto("/travel");
+  const main = page.locator("main");
+  await expect(main).toContainText("August 26, 2027");
+  await expect(main).toContainText("August 27, 2027");
+  await expect(main.locator(".travel-section")).toHaveCount(7);
+  await expect(main.locator(".travel-pending")).toHaveCount(5);
+  await expect(main.getByRole("link", { name: /Get directions/i })).toHaveCount(
+    0,
+  );
+  await expect(main.locator('a[href*="maps"]')).toHaveCount(0);
+  await expect(
+    main.getByRole("link", { name: "Official CBX requirements" }),
+  ).toHaveAttribute(
+    "href",
+    "https://www.crossborderxpress.com/en/requirements",
+  );
+  await expect(main.locator("input")).toHaveCount(0);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth + 1,
+    ),
+  ).toBe(true);
+  await page.getByRole("button", { name: "Español", exact: true }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "es-MX");
+  await expect(main).toContainText("26 de agosto de 2027");
+  await expect(main).toContainText("27 de agosto de 2027");
+  await expect(
+    main.getByRole("heading", { name: "Si viajas en avión" }),
+  ).toBeVisible();
+  await expect(main.locator(".travel-pending")).toHaveCount(5);
+  await expect(main.getByRole("link", { name: /Cómo llegar/i })).toHaveCount(0);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth + 1,
+    ),
+  ).toBe(true);
 });
 
 test("private pages are excluded from search indexing and never render a guest directory", async ({

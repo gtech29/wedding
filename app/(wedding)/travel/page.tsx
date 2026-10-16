@@ -22,6 +22,7 @@ export default async function Travel() {
             <p className="eyebrow">{t.travel.venue}</p>
             <h2>Siempre Valle</h2>
             <p>{t.travel.venueText}</p>
+            <p>{t.common.date}</p>
           </div>
         </section>
         <div className="travel-sections">
@@ -31,7 +32,32 @@ export default async function Travel() {
               <section className="travel-section" key={s.id}>
                 <span className="eyebrow">0{i + 1}</span>
                 <h2>{s.title[locale]}</h2>
-                <p>{s.body?.[locale] || t.travel.pending}</p>
+                {s.body?.[locale] &&
+                  s.body[locale]
+                    .split("\n\n")
+                    .map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {s.pending && (
+                  <div className="travel-pending">
+                    <h3>{t.travel.pendingLabel}</h3>
+                    <p>{s.pending[locale]}</p>
+                  </div>
+                )}
+                {s.links && (
+                  <ul className="travel-links">
+                    {s.links.map((link) => (
+                      <li key={link.url}>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-link"
+                        >
+                          {link.label[locale]} <span aria-hidden="true">↗</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {s.url && s.linkLabel && (
                   <a
                     href={s.url}

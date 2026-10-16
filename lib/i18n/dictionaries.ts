@@ -96,6 +96,7 @@ const en = {
     intro:
       "We’re gathering the details to help you plan your trip to Valle de Guadalupe. We’ll share confirmed information here as it becomes available.",
     pending: "We’ll share these details soon.",
+    pendingLabel: "Details to come",
     venue: "Ceremony & reception",
     venueText:
       "Siempre Valle · Valle de Guadalupe\nEnsenada, Baja California, Mexico",
@@ -284,6 +285,7 @@ const es: typeof en = {
     intro:
       "Estamos reuniendo los detalles para ayudarte a planear tu viaje al Valle de Guadalupe. Aquí compartiremos la información conforme la confirmemos.",
     pending: "Pronto compartiremos estos detalles.",
+    pendingLabel: "Detalles por confirmar",
     venue: "Ceremonia y recepción",
     venueText:
       "Siempre Valle · Valle de Guadalupe\nEnsenada, Baja California, México",

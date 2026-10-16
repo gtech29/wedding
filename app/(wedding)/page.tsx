@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   ArrowDown,
   ArrowUpRight,
+  Calendar,
   MapPin,
   Wine,
   MoveUpRight,
@@ -81,7 +82,7 @@ export default async function Home() {
             label={t.common.photo}
             variant="portrait"
           />
-          <span className="venue-caption">01 / SIEMPRE VALLE</span>
+          <span className="venue-caption">SIEMPRE VALLE</span>
         </div>
         <div className="venue-copy">
           <p className="eyebrow">{t.home.locationLabel}</p>
@@ -95,9 +96,7 @@ export default async function Home() {
               </p>
             </div>
             <div>
-              <span className="venue-date" aria-hidden="true">
-                27
-              </span>
+              <Calendar size={18} strokeWidth={1.2} aria-hidden="true" />
               <p>
                 {t.common.date}
                 <span>{wedding.ceremonyTime?.[locale] || t.home.time}</span>
@@ -133,10 +132,10 @@ export default async function Home() {
               text: t.home.faqText,
               icon: <span className="serif">?</span>,
             },
-          ].map((card, i) => (
+          ].map((card) => (
             <Link href={card.href} className="detail-card" key={card.href}>
               <div className="detail-card-top">
-                <span>0{i + 1}</span>
+                <span aria-hidden="true" />
                 {card.icon}
               </div>
               <h3>{card.title}</h3>

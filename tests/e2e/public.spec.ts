@@ -114,11 +114,11 @@ test("travel keeps pending arrangements distinct in both languages and fits the 
   await expect(main).toContainText("August 26, 2027");
   await expect(main).toContainText("August 27, 2027");
   await expect(main.locator(".travel-section")).toHaveCount(7);
-  await expect(main.locator(".travel-pending")).toHaveCount(5);
-  await expect(main.getByRole("link", { name: /Get directions/i })).toHaveCount(
-    0,
-  );
-  await expect(main.locator('a[href*="maps"]')).toHaveCount(0);
+  await expect(main.locator(".travel-pending")).toHaveCount(4);
+  await expect(
+    main.getByRole("link", { name: /Get directions/i }),
+  ).toHaveAttribute("href", "https://maps.app.goo.gl/MNUszKdbvFzKWBwS9");
+  await expect(main.locator('a[href*="maps"]')).toHaveCount(1);
   await expect(
     main.getByRole("link", { name: "Official CBX requirements" }),
   ).toHaveAttribute(
@@ -138,8 +138,10 @@ test("travel keeps pending arrangements distinct in both languages and fits the 
   await expect(
     main.getByRole("heading", { name: "Si viajas en avión" }),
   ).toBeVisible();
-  await expect(main.locator(".travel-pending")).toHaveCount(5);
-  await expect(main.getByRole("link", { name: /Cómo llegar/i })).toHaveCount(0);
+  await expect(main.locator(".travel-pending")).toHaveCount(4);
+  await expect(
+    main.getByRole("link", { name: /Cómo llegar/i }),
+  ).toHaveAttribute("href", "https://maps.app.goo.gl/MNUszKdbvFzKWBwS9");
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth + 1,

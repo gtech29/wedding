@@ -87,15 +87,12 @@ export const travelSections: TravelSection[] = [
     enabled: true,
     title: { en: "Getting there", "es-MX": "Cómo llegar" },
     body: {
-      en: "Most guests will drive from Southern California, crossing into Baja California and continuing to Valle de Guadalupe. Allow flexibility for the border crossing and your journey.",
+      en: "From Southern California, head south to the San Ysidro border crossing into Tijuana. Follow signs toward Playas de Tijuana and the México 1D scenic toll road toward Rosarito and Ensenada, then follow navigation toward Siempre Valle in Valle de Guadalupe.\n\nBring cash for the toll roads, and allow extra time for traffic and border crossings. Check your route before leaving and save the venue location on your phone.",
       "es-MX":
-        "La mayoría de los invitados viajará en auto desde el sur de California, cruzando a Baja California y siguiendo hacia el Valle de Guadalupe. Considera tiempo adicional para el cruce fronterizo y el recorrido.",
+        "Desde el sur de California, dirígete al cruce fronterizo de San Ysidro para entrar a Tijuana. Sigue los señalamientos hacia Playas de Tijuana y la carretera escénica de cuota México 1D rumbo a Rosarito y Ensenada. Después, sigue las indicaciones de tu navegador hacia Siempre Valle, en el Valle de Guadalupe.\n\nLleva efectivo para las casetas y considera tiempo extra por el tráfico y los cruces fronterizos. Revisa tu ruta antes de salir y guarda la ubicación del lugar en tu celular.",
     },
-    pending: {
-      en: "We’re confirming the venue’s entrance pin and final approach instructions. Once confirmed, we’ll share a Get directions button, the address, and short entrance instructions, with a photo or landmark if available.",
-      "es-MX":
-        "Estamos confirmando la ubicación exacta de la entrada y las indicaciones para el último tramo. Cuando estén listas, agregaremos un botón de Cómo llegar, la dirección y las instrucciones de acceso, con una foto o un punto de referencia si lo tenemos.",
-    },
+    url: "https://maps.app.goo.gl/MNUszKdbvFzKWBwS9",
+    linkLabel: { en: "Get directions", "es-MX": "Cómo llegar" },
   },
   {
     id: "flying",

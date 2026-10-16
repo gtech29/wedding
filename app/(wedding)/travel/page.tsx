@@ -63,7 +63,7 @@ export default async function Travel() {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-link"
+                    className="button button-outline travel-directions"
                   >
                     {s.linkLabel[locale]} ↗
                   </a>

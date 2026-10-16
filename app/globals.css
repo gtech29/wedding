@@ -1074,6 +1074,10 @@ select:focus-visible {
   margin-top: 16px;
 }
 
+.travel-directions {
+  margin-top: 20px;
+}
+
 .travel-pending {
   margin-top: 20px;
   padding-left: 16px;
